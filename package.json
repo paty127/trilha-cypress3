@@ -1,0 +1,27 @@
+{
+  "name": "trilha-cypress3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:open:prod": "cypress open --env configFile=prod",
+    "cy:run:prod": "cypress run --env configFile=prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paty127/trilha-cypress3.git"
+  },
+  "keywords": [],
+  "author": "Patricia Sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paty127/trilha-cypress3/issues"
+  },
+  "homepage": "https://github.com/paty127/trilha-cypress3#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
+}

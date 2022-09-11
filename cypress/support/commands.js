@@ -53,7 +53,7 @@ Cypress.Commands.add('logar', (email, senha)=> {
     return cy.request({
         method: 'POST',
         url: '/login',   
-        failOnStatusCode: false,
+        failOnStatusCode: true,
         body: {
             "email": email,
             "password": senha

@@ -4,14 +4,14 @@
     "type": "object",
     "required": [
         "message",
-        "_id"
+        "idCarrinho"
     ],
     "additionalProperties": true,
     "properties": {
         "message": {
             "type": "string"
         },
-        "_id": {
+        "idCarrinho": {
             "type": "string"
         }
     }

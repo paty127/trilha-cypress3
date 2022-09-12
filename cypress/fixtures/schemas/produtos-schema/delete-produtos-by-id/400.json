@@ -1,18 +1,22 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
     "required": [
         "message",
-        "_id"
+        "idCarrinho"
     ],
     "additionalProperties": true,
     "properties": {
         "message": {
             "type": "string"
         },
-        "_id": {
-            "type": "string"
+        "idCarrinho": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "string"
+            }
         }
     }
 }

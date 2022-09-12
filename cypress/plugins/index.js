@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 // ***********************************************************
-const cypress = require('cypress');
+//const cypress = require('cypress');
 const fs = require('fs-extra');
 const path = require('path');
 

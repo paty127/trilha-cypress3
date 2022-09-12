@@ -3,15 +3,11 @@
     "$id": "http://example.com/example.json",
     "type": "object",
     "required": [
-        "message",
-        "_id"
+        "message"
     ],
     "additionalProperties": true,
     "properties": {
         "message": {
-            "type": "string"
-        },
-        "_id": {
             "type": "string"
         }
     }

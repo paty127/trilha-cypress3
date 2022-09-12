@@ -6,7 +6,7 @@ import ValidaServerest from '../services/validaServerest.service'
 
 describe('Casos de tese sobre a rota /produtos da API Serverest', () => {
 
-    it('Deve buscar todos so aprodutos cadastrados', () => {
+    it('Deve buscar todos os produtos cadastrados', () => {
         Serverest.buscarProdutos().then(res => {
             ValidaServerest.validarBuscaDeProdutos(res)
         })

@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-09-12T15:04:01.049Z",
+    "end": "2022-09-12T15:04:02.554Z",
+    "duration": 1505,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08679e30-c8c3-44f2-aa88-14621ea0694b",
+      "title": "",
+      "fullFile": "cypress/integration/4.carrinhos.spec.js",
+      "file": "cypress/integration/4.carrinhos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "815855e3-6716-4888-a5fd-15154fd67c5b",
+          "title": "Casos de tese sobre a rota /carrinhos da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve buscar todos  os carrinhos cadastrado ",
+              "fullTitle": "Casos de tese sobre a rota /carrinhos da API Serverest Deve buscar todos  os carrinhos cadastrado ",
+              "timedOut": null,
+              "duration": 420,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarCarrinhos().then(res => {\n  _validaServerest.default.validarBuscaDeCarrinhos(res);\n});",
+              "err": {
+                "message": "TypeError: _validaServerest.default.validarBuscaDeCarrinhos is not a function",
+                "estack": "TypeError: _validaServerest.default.validarBuscaDeCarrinhos is not a function\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:127:32)",
+                "diff": null
+              },
+              "uuid": "e1c6587c-b255-4466-9cad-afc484db02e3",
+              "parentUUID": "815855e3-6716-4888-a5fd-15154fd67c5b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "561bd8f7-0856-49b1-9ddf-2f1a0ac072c0",
+              "title": "Logar com sucesso",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve postar um novo carinho com sucesso",
+                  "fullTitle": "Casos de tese sobre a rota /carrinhos da API Serverest Logar com sucesso Deve postar um novo carinho com sucesso",
+                  "timedOut": null,
+                  "duration": 953,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.cadastrarCarrinhoComSucesso().then(res => {\n  _validaServerest.default.validarCadastroDeCarrinhoComSucesso(res);\n});",
+                  "err": {
+                    "message": "CypressError: `cy.request()` failed on:\n\nhttps://serverest.dev/carrinhos\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://serverest.dev/carrinhos\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"authorization\": \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF1dG9tYXRpb24tcG9zdFVzZXJLZW5uYS5CYXNoaXJpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiaWF0IjoxNjYyOTk1MDM0LCJleHAiOjE2NjI5OTU2MzR9.pKzBBbGQ6LtOXt63lUkTxBxvX3S3UxAR-PFL82OihJA\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 47\n}\nBody: {\"idProduto\":\"BeeJh5lz3k6kSIzA\",\"quantidade\":1}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"access-control-allow-origin\": \"*\",\n  \"x-dns-prefetch-control\": \"off\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"strict-transport-security\": \"max-age=15552000; includeSubDomains\",\n  \"x-download-options\": \"noopen\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"x-moesif-transaction-id\": \"0ec280d1-7d84-49cf-b769-876ec5270aca\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"x-cloud-trace-context\": \"1644ae743a774896eaf77833c10c5ac6\",\n  \"date\": \"Mon, 12 Sep 2022 15:03:55 GMT\",\n  \"server\": \"Google Frontend\",\n  \"content-length\": \"144\"\n}\nBody: {\n  \"produtos\": \"produtos é obrigatório\",\n  \"idProduto\": \"idProduto não é permitido\",\n  \"quantidade\": \"quantidade não é permitido\"\n}\n\n\nhttps://on.cypress.io/request",
+                    "estack": "CypressError: `cy.request()` failed on:\n\nhttps://serverest.dev/carrinhos\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://serverest.dev/carrinhos\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"authorization\": \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF1dG9tYXRpb24tcG9zdFVzZXJLZW5uYS5CYXNoaXJpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiaWF0IjoxNjYyOTk1MDM0LCJleHAiOjE2NjI5OTU2MzR9.pKzBBbGQ6LtOXt63lUkTxBxvX3S3UxAR-PFL82OihJA\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 47\n}\nBody: {\"idProduto\":\"BeeJh5lz3k6kSIzA\",\"quantidade\":1}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"access-control-allow-origin\": \"*\",\n  \"x-dns-prefetch-control\": \"off\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"strict-transport-security\": \"max-age=15552000; includeSubDomains\",\n  \"x-download-options\": \"noopen\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"x-moesif-transaction-id\": \"0ec280d1-7d84-49cf-b769-876ec5270aca\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"x-cloud-trace-context\": \"1644ae743a774896eaf77833c10c5ac6\",\n  \"date\": \"Mon, 12 Sep 2022 15:03:55 GMT\",\n  \"server\": \"Google Frontend\",\n  \"content-length\": \"144\"\n}\nBody: {\n  \"produtos\": \"produtos é obrigatório\",\n  \"idProduto\": \"idProduto não é permitido\",\n  \"quantidade\": \"quantidade não é permitido\"\n}\n\n\nhttps://on.cypress.io/request\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:165434:80\n    at tryCatcher (https://serverest.dev/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (https://serverest.dev/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (https://serverest.dev/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (https://serverest.dev/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (https://serverest.dev/__cypress/runner/cypress_runner.js:11139:18)\n    at _drainQueueStep (https://serverest.dev/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (https://serverest.dev/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://serverest.dev/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (https://serverest.dev/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Function.validarLoginComSucesso (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:276:5)\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:136:36)",
+                    "diff": null
+                  },
+                  "uuid": "f256d049-553f-4677-bf31-27dd225b1232",
+                  "parentUUID": "561bd8f7-0856-49b1-9ddf-2f1a0ac072c0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "f256d049-553f-4677-bf31-27dd225b1232"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 953,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [
+            "e1c6587c-b255-4466-9cad-afc484db02e3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 420,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

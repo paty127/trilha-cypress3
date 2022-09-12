@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "required": [
+        "produtos",
+        "precoTotal",
+        "quantidadeTotal",
+        "idUsuario",
+        "_id"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "produtos": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "idProduto",
+                        "quantidade",
+                        "precoUnitario"
+                    ],
+                    "additionalProperties": true,
+                    "properties": {
+                        "idProduto": {
+                            "type": "string"
+                        },
+                        "quantidade": {
+                            "type": "integer"
+                        },
+                        "precoUnitario": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        },
+        "precoTotal": {
+            "type": "integer"
+        },
+        "quantidadeTotal": {
+            "type": "integer"
+        },
+        "idUsuario": {
+            "type": "string"
+        },
+        "_id": {
+            "type": "string"
+        }
+    }
+}

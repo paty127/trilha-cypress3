@@ -1,5 +1,47 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+      "quantidade",
+      "usuarios"
+  ],
+  "additionalProperties": true,
+  "properties": {
+      "quantidade": {
+          "type": "integer"
+      },
+      "usuarios": {
+          "type": "array",
+          "additionalItems": true,
+          "items": {
+              "type": "object",
+              "required": [
+                  "nome",
+                  "email",
+                  "password",
+                  "administrador",
+                  "_id"
+              ],
+              "additionalProperties": true,
+              "properties": {
+                  "nome": {
+                      "type": "string"
+                  },
+                  "email": {
+                      "type": "string"
+                  },
+                  "password": {
+                      "type": "string"
+                  },
+                  "administrador": {
+                      "type": "string"
+                  },
+                  "_id": {
+                      "type": "string"
+                  }
+              }
+          }
+      }
+  }
 }

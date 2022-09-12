@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/paty127/trilha-cypress3#readme",
   "devDependencies": {
+    "ajv": "^8.11.0",
     "cypress": "^9.7.0"
   }
 }

@@ -100,6 +100,6 @@ Bibliotecas de apoio:
 
 -Mochawesome Report, para geração de relatórios: https://www.npmjs.com/package/mochawesome 
 
-Referências e agradecimentos, Alisson e toda equipe
+Referências e agradecimentos, Vinicius e toda equipe
 
  

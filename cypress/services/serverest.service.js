@@ -43,7 +43,7 @@ export default class Serverest {
 
     }
     static buscarProdutosParaCarrinho() {
-        return cy.request( URL_PRODUTOS).then(res => {
+        return cy.request(URL_PRODUTOS).then(res => {
             cy.wrap({
                 idProduto: res.body.produtos[0]._id,
                 quantidade: 1

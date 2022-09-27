@@ -29,90 +29,71 @@ import Ajv from 'ajv'
 
 
 const ajv = new Ajv({
-    allErrors: true, verbose: true, strict: false})
-
-    Cypress.Commands.add('contractValidation', (res, schema, status) => {
-        cy.log('Validando contrato para ' + schema + 'com status' + status)
-         cy.fixture(`schemas/${schema}/${status}.json`).then(schema => { 
-            const validate = ajv.compile(schema)
-            const valid = validate(res.body)
-            //  cy.log(JSON.stringify(validate.errors))
-            
-            if (!valid) {
-                var errors = ''
-                for(let each in validate.errors){
-                    let err = validate.errors[each]
-                    errors += `\n${err.instancePath} ${err.message}, but received ${typeof err.data}`
-                }
-                throw new Error('Errors encontrados na validação de contrato, por favor verifique: ' + errors)   
-                    
-            }
-           return true
-    })
-    
+    allErrors: true,
+    verbose: true,
+    strict: false
 })
-Cypress.Commands.add('postarUsuarioSemSucesso', () => { 
-    cy.request({
+
+Cypress.Commands.add('contractValidation', (res, schema, status) => {
+    cy.log('Validando contrato para ' + schema + 'com status' + status)
+    cy.fixture(`schemas/${schema}/${status}.json`).then(schema => {
+        const validate = ajv.compile(schema)
+        const valid = validate(res.body)
+        //  cy.log(JSON.stringify(validate.errors))
+
+        if (!valid) {
+            var errors = ''
+            for (let each in validate.errors) {
+                let err = validate.errors[each]
+                errors += `\n${err.instancePath} ${err.message}, but received ${typeof err.data}`
+            }
+            throw new Error('Errors encontrados na validação de contrato, por favor verifique: ' + errors)
+
+        }
+        return true
+    })
+
+})
+Cypress.Commands.add('postarUsuarioSemSucesso', () => {
+    return cy.request({
         method: 'POST',
         url: '/usuarios',
         failOnStatusCode: false,
         body: {
             "nome": "Fulano da Silva",
-            "email": "fulano@qa.com",
+            "email": "beltrano@qa.com.br",
             "password": "teste",
-            "administrador": "true",
+            "administrador": "true"
         }
-        
+
     })
 })
-Cypress.Commands.add('rest', (method ='GET', url = '/', body = null, failOnStatusCode = false ) => {
+Cypress.Commands.add('rest', (method = 'GET', url = '/', body = null, failOnStatusCode = false) => {
     return cy.request({
         method: method,
-        url: url,   
+        url: url,
         failOnStatusCode: failOnStatusCode,
         body: body
     })
 })
-Cypress.Commands.add('logar', (email, senha)=> {
+Cypress.Commands.add('logar', (email, senha) => {
     return cy.request({
         method: 'POST',
-        url: '/login',   
+        url: '/login',
         failOnStatusCode: true,
         body: {
             "email": email,
             "password": senha
 
         }
-    })  
-}) 
+    })
+})
 Cypress.Commands.add('buscarUsuarioParaLogin', () => {
-    cy.rest('GET', '/usuarios').then( res => {
+    cy.rest('GET', '/usuarios').then(res => {
         expect(res.body).to.haveOwnProperty('usuarios')
         return {
             email: res.body.usuarios[0].email,
             senha: res.body.usuarios[0].password
         }
-    }) 
-}) 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    })
+})

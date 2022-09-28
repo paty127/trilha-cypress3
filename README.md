@@ -1,4 +1,4 @@
-<h1 align="center">Sprint 5 Cypress - API - Serverest </h1>
+<h1 align="center">Sprint 6 Cypress - API - Serverest </h1>
 
 <p>Este projeto foi criado para demonstrar a utilização do Cypress para testar as principais rotas do  ServeRest que é um servidor REST que simula uma loja virtual com intuito de servir de material de estudos de testes de API. <p>
 
